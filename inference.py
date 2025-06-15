@@ -203,10 +203,11 @@ if decoded.shape[0] > 1:
 # Convert to numpy and make sure shape is (samples, channels)
 audio_np = decoded.cpu().numpy().T  # shape: (samples, 1)
 
-sd.play(audio_np, samplerate=track.rate)
-sd.wait()
-sd.play(x.T, samplerate=track.rate)
-sd.wait()  
+if not os.environ.get("DISABLE_AUDIO"):
+    sd.play(audio_np, samplerate=track.rate)
+    sd.wait()
+    sd.play(x.T, samplerate=track.rate)
+    sd.wait()  
 
 
 
