@@ -16,6 +16,7 @@ from encodec.utils import convert_audio
 import gradio as gr
 import torchaudio
 import io
+import ffmpeg
 import soundfile as sf
 from inference import AudioTransformerPipeline
 

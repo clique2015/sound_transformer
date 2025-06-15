@@ -6,3 +6,23 @@ sounddevice
 musdb
 ffmpeg
 ffmpeg-python==0.2.0
+
+sudo apt install -y python3-venv
+python3 -m venv .venv
+source .venv/bin/activate
+pip install --upgrade pip
+pip install tqdm
+pip install numpy
+pip install musdb
+pip install ffmpeg-python==0.2.0
+pip install setuptools
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+sudo apt update
+sudo apt install -y libportaudio2 libportaudiocpp0 portaudio19-dev
+pip install sounddevice
+pip install ipython
+pip install encodec
+pip install soundfile
+pip install gradio
+
+python app.py
