@@ -36,5 +36,12 @@ pip install tqdm numpy musdb ffmpeg-python==0.2.0 sounddevice ipython encodec so
   <p>Once everything is set up, you can run the application using:</p>
   <pre><code>python app.py</code></pre>
 
+<p>
+  The <code>Dockerfile</code> defines a lightweight, reproducible environment for running the audio transformer application. 
+  It installs essential system libraries like <code>ffmpeg</code> and <code>libsndfile1</code>, 
+  and sets up Python dependencies including Encodec (installed directly from GitHub). The project files are copied into the container, 
+  and the application is launched via <code>python app.py</code>. The container exposes port <code>7860</code>, making it suitable 
+  for serving web interfaces like Gradio.
+</p>
 </body>
 </html>
