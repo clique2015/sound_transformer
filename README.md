@@ -3,42 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Transformer Project Setup</title>
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-      color: #333;
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 40px 20px;
-    }
-    h2 {
-      color: #005f99;
-      border-bottom: 2px solid #007acc;
-      padding-bottom: 5px;
-    }
-    pre {
-      background-color: #1e1e1e;
-      color: #dcdcdc;
-      padding: 1em;
-      border-radius: 6px;
-      overflow-x: auto;
-      font-family: 'Fira Code', monospace;
-      font-size: 0.95rem;
-      margin: 1.5em 0;
-    }
-    code {
-      background-color: #f0f0f0;
-      padding: 2px 4px;
-      border-radius: 3px;
-      font-family: 'Courier New', monospace;
-    }
-    p {
-      margin-bottom: 1em;
-    }
-  </style>
 </head>
 <body>
 
