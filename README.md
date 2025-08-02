@@ -1,40 +1,76 @@
- Installation
-1. System Dependencies
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Transformer Project Setup</title>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      line-height: 1.6;
+      background-color: #f9f9f9;
+      color: #333;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    h2 {
+      color: #005f99;
+      border-bottom: 2px solid #007acc;
+      padding-bottom: 5px;
+    }
+    pre {
+      background-color: #1e1e1e;
+      color: #dcdcdc;
+      padding: 1em;
+      border-radius: 6px;
+      overflow-x: auto;
+      font-family: 'Fira Code', monospace;
+      font-size: 0.95rem;
+      margin: 1.5em 0;
+    }
+    code {
+      background-color: #f0f0f0;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+    }
+    p {
+      margin-bottom: 1em;
+    }
+  </style>
+</head>
+<body>
 
-Before you begin, install system-level packages:
+  <h2>🛠️ Installation</h2>
 
-sudo apt update
-sudo apt install -y python3-venv libportaudio2 libportaudiocpp0 portaudio19-dev ffmpeg
+  <h3>1. System Dependencies</h3>
+  <p>Before you begin, install the required system-level packages:</p>
+  <pre><code>sudo apt update
+sudo apt install -y python3-venv libportaudio2 libportaudiocpp0 portaudio19-dev ffmpeg</code></pre>
 
-2. Set Up Python Virtual Environment
-
-It’s recommended to use a virtual environment to avoid conflicts:
-
-python3 -m venv .venv
+  <h3>2. Set Up Python Virtual Environment</h3>
+  <p>Use a virtual environment to isolate your project's dependencies:</p>
+  <pre><code>python3 -m venv .venv
 source .venv/bin/activate
-pip install --upgrade pip setuptools
+pip install --upgrade pip setuptools</code></pre>
 
-3. Install Python Dependencies
+  <h3>3. Install Python Dependencies</h3>
+  <p>Install all required Python packages using the <code>requirements.txt</code>:</p>
+  <pre><code>pip install -r requirements.txt</code></pre>
 
-Use the provided requirements.txt file:
+  <p>Or, you can install them manually:</p>
+  <pre><code>pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+pip install tqdm numpy musdb ffmpeg-python==0.2.0 sounddevice ipython encodec soundfile gradio</code></pre>
 
-pip install -r requirements.txt
+  <h3>4. Optional: Use Bleeding-Edge Encodec</h3>
+  <p>To install the latest (unreleased) version of <strong>Encodec</strong> from GitHub:</p>
+  <pre><code>pip install git+https://github.com/facebookresearch/encodec#egg=encodec</code></pre>
+  <p><strong>⚠️ Note:</strong> This may include experimental changes not present in the stable release.</p>
 
-Or install packages manually:
+  <h3>5. Launch the App</h3>
+  <p>Once everything is set up, you can run the application using:</p>
+  <pre><code>python app.py</code></pre>
 
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
-pip install tqdm numpy musdb ffmpeg-python==0.2.0 sounddevice ipython encodec soundfile gradio
-
-4. Optional: Use Bleeding-Edge Encodec
-
-To install the latest version of Encodec from source:
-
-pip install git+https://github.com/facebookresearch/encodec#egg=encodec
-
-    ⚠️ This may include experimental changes not in the stable release.
-
-5. Launch the App
-
-Once everything is installed, start the app:
-
-python app.py
+</body>
+</html>
